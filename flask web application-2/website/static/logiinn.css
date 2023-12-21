@@ -1,0 +1,75 @@
+body {
+    background: url('images/p1.jpg') no-repeat center center fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2 {
+    font-family: 'Oleo Script', cursive;
+    font-size: 24 pt;
+    color: black;
+    margin-top: 50px;
+}
+
+.container {
+    background-color: rgba(247, 242, 235, 0.884);
+}
+
+.text {
+    background-color: rgba(211, 211, 211, 0);
+    font-family: Patua One;
+    font-size: 14pt;
+}
+
+.navbar-nav {
+    background-color: rgba(211, 211, 211, 0);
+    text-align: center;
+    font-family: Patua One;
+    font-size: 14pt;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 50pt;
+    margin-left: 20px;
+    margin-right: 40px;
+    -webkit-text-fill-color: rgb(255, 115, 0);
+}
+
+.navbar-nav {
+    text-align: center;
+    font-family: Patua One;
+    font-size: 14pt;
+}
+
+.nav-item {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+.dropdown-item {
+    text-align: center;
+}
+
+label {
+    background: transparent;
+}
+
+.check {
+    height: 15px;
+    width: 15px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

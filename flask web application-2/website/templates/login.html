@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content%}
+    <head>
+      <meta charset="UTF-8">
+      <title>Enqor - Login</title>
+      <link rel="stylesheet" href="/static/logiinn.css">
+    </head>
+
+    <br>
+    <div class="container col-md-12">
+        <div class="text ">
+            <div>
+                <h2>Log in </h2>
+                <form method ="POST">
+                    
+                    <!-- email box -->
+                    <div class="form-group col-md-6">
+                        <label for="email">Email Adress:</label>
+                        <input 
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email adress"
+                        />
+                    </div>
+
+                    <!-- password box -->
+                    <div class="form-group col-md-6">
+                      <label for="password">Password:</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Enter password"
+                        />
+                    </div>
+
+                    <!-- Remember me checkbox -->
+                    <div class="checkbox">
+                        <label><input class="check" type="checkbox" name="remember"> Remember me</label>
+                    </div>
+
+                    <!-- Submit box -->
+                    <button type="submit" class ="btn btn-primary">Submit</button>
+                   
+                    <!-- Sign up page reference -->
+                    <p>Don't have an account? <a href="/sign_up" style="color:red">Sign up</a>.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--  
+    <footer class="footer bg-light text-center" id="footer">
+      <div class="text-center p-3" style="background-color: rgba(252, 238, 225, 0.986)">
+          <p>
+              © 2022 Copyright: <a class="text-dark" href="Index.html">Enqor.html</a><br/> Have questions about your order? Please <a class="text-dark">Contact Us</a><br/>
+          </p>
+      </div>
+    </footer>
+    -->
+  {% endblock %}

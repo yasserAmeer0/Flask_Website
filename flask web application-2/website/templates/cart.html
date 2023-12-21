@@ -1,0 +1,100 @@
+ 
+<!DOCTYPE html>
+<html>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/index.css">
+    <title>{% block title %}Enqor{% endblock %}</title>
+  </head>
+  
+  <body class="main">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand">Enqor</a>
+      <button
+          class="navbar-toggler" 
+          type="button" 
+          data-toggle="collapse" 
+          data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+      >
+      
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav">
+          
+         
+         <!-- done --> 
+         <li class="nav-item">
+          <a class="nav-link" id ="home" href="/"><img src="/static/images/home1.png" width="15px" height="15px"> Home</a>
+         </li>
+          
+          <!-- done -->
+          <li class="nav-item">
+            <a class="nav-link" id ="search" href="/search"><img src="/static/images/search.png" width="20px" height="20px"> Find Product</a>
+          </li> 
+
+          <li class="nav-item">
+              <a class="nav-link" id ="cart" href="/cart"><img src="/static/images/cart.png" width="18px" height="18px"> Cart </a>
+          </li> 
+
+          <!-- done --> 
+          <a class="nav-item nav-link" id="logout" href="/logout"><img src="/static/images/login.png" width="18px" height="18px"> Logout</a>
+          
+          
+        </div>
+      </div>
+    </nav>
+
+<div class="container">
+ <table class="table">
+     <thead style="background-color: brown;color: aliceblue;">
+        <th>ID</th>
+        <th>Item Name</th>
+        <th>Item Quantity</th>
+        <th>Details</th>
+        <th>Admin 1 price</th>
+        <th>Admin 2 price</th>
+        <th>Admin 3 price</th>
+    </thead>
+
+   <tbody>
+    {% for item in items %}
+    {% if item.user_id == current_user.id %}
+    <tr
+    {% if loop.index %2==0 %}
+    style="background-color: rgb(255, 217, 247);"
+    {% else %}
+    style="background-color: rgb(248, 169, 231);"
+    {% endif %}
+    ><td>{{ loop.index }}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.quantity}}</td>
+    <td>{{item.details}}</td>
+    <td>{{item.price1}}</td>
+    <td>{{item.price2}}</td>
+    <td>{{item.price3}}</td>
+    <td> <span style="font-size: 24px;color:green;">
+       <a href="/{{item.id}}/edit"> <i class="fas fa-edit"></i></a> </span>
+        | <span style="font-size: 24px;color:red;">  
+          <a href="/{{item.id}}/delete"> <i class="fas fa-trash-alt"></i></a></span></td>
+    {% endif %}
+    {% endfor %}
+   </tbody>
+ </table>
+  
+</div>
+
+  </body>
+</html>

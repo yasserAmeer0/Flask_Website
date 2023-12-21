@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block title %}Search{% endblock %} {% block content%}
+    
+<head>
+  <meta charset="UTF-8">
+  <title>Enqor - Search</title>
+  <link rel="stylesheet" href="/static/logiinn.css">
+</head>
+
+<br>
+<div class="container col-md-12">
+    <div class="text ">
+        <div>
+        <h2>Search items to add in cart</h2>
+    
+    <!-- add note button -->
+    <form method="POST">
+
+      <div class="form-group col-md-6">
+          <label for="item">Items:</label>
+          <input 
+          type="text" 
+          class="form-control" 
+          id="item"  
+          name="item"
+          placeholder="Enter item"
+          />
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="quantity">Quantity:</label>
+        <input 
+        type="number" 
+        class="form-control" 
+        id="quantity"  
+        name="quantity"
+        placeholder="Enter quantity"
+        />
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="detail">Detail:</label>
+        <input 
+        type="text" 
+        class="form-control" 
+        id="detail"  
+        name="detail"
+        placeholder="Enter detail"
+        />
+      </div>
+
+      <br/>
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Add Item</button>
+      </div>
+    </form>
+  
+    {% endblock %}

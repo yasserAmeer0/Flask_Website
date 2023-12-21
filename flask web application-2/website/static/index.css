@@ -1,0 +1,230 @@
+/*------Index------*/
+.main {
+    background: url('images/p1.jpg') no-repeat center center fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+.navbar-brand{
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    font-size: 50pt;
+    margin-left: 20px;
+    margin-right: 40px;
+    -webkit-text-fill-color:rgb(255, 115, 0);
+
+}
+.navbar-nav{
+    text-align: center;
+    font-family: Patua One;
+    font-size: 14pt;
+}
+.nav-item{
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+}
+.dropdown-item{
+    text-align: center;
+}
+
+.banner{
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    opacity: 0.9;
+    padding: 50px;
+}
+.banner-title{
+    font-family: Pacifico;
+    font-size: 80pt;
+    color: rgb(255, 115, 0);
+}
+h2{
+    font-family: Oleo Script;
+    font-size: 30pt;
+    color:black;
+}
+.banner-para{
+    font-family: Oleo Script;
+    font-size: 18pt;
+    color: rgb(117, 117, 117);
+}
+.btn-primary{
+    text-decoration: none;
+    display: inline-block;
+    background:rgb(0, 132, 255);
+    color: white;
+    padding: 8px 30px;
+    margin-left: 42%;
+    margin-top: 10px;
+    border-radius: 30px;
+    font-size: 14pt;
+    font-family: Patua One;
+}
+.btn-primary:hover{
+    background: rgb(38, 61, 124);
+}
+.banner-2{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 300px;
+    background-color: white;
+    opacity: 0.9;
+    padding: 50px;
+}
+.banner-para2{
+    text-align: center;
+    font-family: Patua One;
+    font-size: 24pt;
+    color: black;
+
+}
+.btn-sec{
+    text-decoration: none;
+    display: inline-block;
+    background:red;
+    color: white;
+    padding: 8px 30px;
+    margin-left: 41%;
+    margin-top: 10px;
+    border-radius: 30px;
+    font-size: 14pt;
+    font-family: Patua One;
+}
+.footer{
+    background-color:white;
+}
+
+/*------ShopCart------*/
+.cart-responsive.shopcart{
+    margin-bottom: 120px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 100px;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: white;
+    background: rgb(255, 136, 0);
+    opacity: 0.9;
+    font-weight: normal;
+}
+td{
+    background:white;
+    opacity: 0.9;
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 0px;
+}
+.btn.rmv{
+    color:red;
+    font-size: 15px;
+    padding: 5px;
+}
+.qtyProd1{
+    margin-left: 15px;
+}
+.btn.btn-qtySub{
+    background-color: black;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 8px;
+}
+.btn.btn-qtyAdd{
+    background-color: black;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+/*------ContactUs------*/
+.contact{
+    background-color: rgba(247, 242, 235, 0.884);
+    margin-top: 70px; 
+    margin-bottom: 70px;
+    padding-bottom: 50px;
+
+}
+.contactHead{
+    padding-top: 50px;
+    font-family: Eczar;
+}
+.formItem{
+    background-color: transparent;
+
+}
+.form-control{
+    text-align: left;
+}
+#warn{
+    color: red;
+    margin-left: 10px;
+}
+
+/*------Products------*/
+
+.product{
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+.prod{
+    background-color: white;
+    font-family: Patua One;
+}
+.prod.brand{
+    padding-top: 10px;
+}
+.prod.saleCost{
+    padding-top: 20px;
+}
+.prod.cost{
+    padding-top: 20px;
+}
+.qty{
+    margin-top: 30px;
+    background-color: white;
+}
+.btn.Add{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    font-family: serif;
+}
+.btn.Add:hover{
+    color: rgb(49, 49, 49)
+}
+.panel-group{
+    background-color: white;
+}
+.btn.btn-link.prodDesc{
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+
+
+

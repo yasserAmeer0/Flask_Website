@@ -1,0 +1,139 @@
+ 
+<!DOCTYPE html>
+<html>
+<!-- notifaction messages -->
+{% with messages = get_flashed_messages(with_categories=true) %} {% if
+  messages %} {% for category, message in messages %} {% if category ==
+  'error' %}
+  <div class="alert alert-danger alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% else %}
+  <div class="alert alert-success alter-dismissable fade show" role="alert">
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+
+
+
+  
+  <div class="container">{% block content %} {% endblock %}</div>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='index.js') }}"
+  ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/static/index.css">
+    <script src="https://use.fontawesome.com/239426d08d.js"></script>
+    <title>{% block title %}Enqor{% endblock %}</title>
+  </head>
+  
+  <body class="main">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand">Enqor</a>
+      <button
+          class="navbar-toggler" 
+          type="button" 
+          data-toggle="collapse" 
+          data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+      >
+      
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav">
+          
+          <!-- done --> 
+          <a class="nav-item nav-link" id="logout" href="/logout"><img src="/static/images/login.png" width="18px" height="18px"> Admin Logout</a>
+        </div>
+      </div>
+    </nav>
+
+<div class="container">
+ <table class="table">
+     <thead style="background-color: brown;color: aliceblue;">
+        <th>User Name</th>
+        <th>Item Name</th>
+        <th>Item Quantity</th>
+        <th>Details</th>
+        <th>Admin 1</th>
+        <th>Admin 2</th>
+        <th>Admin 3</th>
+
+    </thead>
+
+    {% for user in users%}
+
+    {% for item in items %}
+    {% if item.user_id == user.id %}
+
+   <tbody>
+
+    <!-- This form is responsible in sending the price to the designated function, in admin submittingprice-->
+    <!-- It's inside the loop since we need a form for each item id so that way we can change each item correctly -->
+    <form action="/{{item.id}}/submittingprice" method="post">
+
+      <td>{{user.first_name}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.quantity}}</td>
+      <td>{{item.details}}</td>
+      <td><input id="price" name="price" type="number"/></td>
+     
+      <!-- if flow can make a better text area with a submit button then yay-->
+      <!-- <td><input name="price" type="number" ></textarea></td> -->
+    
+      <td> 
+        
+        <button type="submit" class="btn btn-warning">Submit</button>
+        
+        </span>
+      </td>
+    </form>
+
+    {% endif %}
+
+
+   </tbody>
+
+   {% endfor %}
+   {% endfor %}
+ </table>
+  
+</div>
+  </body>
+</html>
